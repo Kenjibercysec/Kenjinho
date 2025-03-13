@@ -4,7 +4,7 @@ published: 2025-02-20
 updated: 2025-03-04
 description: 'Django version of the SINGED application'
 image: ''
-tags: [Demo, Projects, Markdown, Fuwari]
+tags: [Projects]
 category: 'Projects'
 draft: false 
 ---
@@ -62,33 +62,33 @@ python manage.py runserver
 ```
 6. Access in your browser
 ```bash
-echo "🌐 http://127.0.0.1:8000"
+"🌐 http://127.0.0.1:8000"
 ```
 ---
 
 # Directory Structure
 ```bash
-echo "📂 Directory Structure"
-echo "projeto/"
-echo "├─ settings.py    # Django configurations"
-echo "├─ urls.py        # URL routing"
-echo "└─ wsgi.py        # WSGI setup"
-echo ""
-echo "home/"
-echo "├─ static/        # CSS, JS, images"
-echo "├─ templates/     # HTML templates"
-echo "├─ views.py       # Application logic"
-echo "└─ models.py      # Database models"
+"📂 Directory Structure"
+"projeto/"
+"├─ settings.py    # Django configurations"
+"├─ urls.py        # URL routing"
+"└─ wsgi.py        # WSGI setup"
+""
+"home/"
+"├─ static/        # CSS, JS, images"
+"├─ templates/     # HTML templates"
+"├─ views.py       # Application logic"
+"└─ models.py      # Database models"
 ```
 # Important Configurations
 ```bash
-echo "⚙️ Important Configurations"
-echo "Static Files Setup"
-echo "Add this to projeto/settings.py:"
-echo "STATIC_URL = '/static/'"
-echo "STATICFILES_DIRS = [BASE_DIR / 'home' / 'static']"
+"⚙️ Important Configurations"
+"Static Files Setup"
+"Add this to projeto/settings.py:"
+"STATIC_URL = '/static/'"
+"STATICFILES_DIRS = [BASE_DIR / 'home' / 'static']"
 ```
 # Pro Tip
 ```bash
-echo "🔄 Pro Tip: Use python manage.py makemigrations after modifying models to generate new migrations."
+"🔄 Pro Tip: Use python manage.py makemigrations after modifying models to generate new migrations."
 ```

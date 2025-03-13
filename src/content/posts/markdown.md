@@ -2,7 +2,7 @@
 title: FastAPI Application at INSS
 published: 2025-02-04
 description: A storage management software for the INSS IT department
-tags: [Markdown, Blogging, Demo]
+tags: [Projects]
 category: Projects
 draft: false
 ---

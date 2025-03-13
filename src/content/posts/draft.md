@@ -1,9 +1,13 @@
 ---
 title: Final Project EMBARCATech
 published: 2025-01-10
-tags: [Markdown, Blogging, Demo]
+updated: 2025-01-11
+description: 'Raspberry Pi HTTP server to monitor networks'
+image: ''
+tags: [Projects]
 category: Projects
-draft: true
+draft: false
+
 ---
 
 ## GitHub Repository 
