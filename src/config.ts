@@ -63,9 +63,9 @@ export const profileConfig: ProfileConfig = {
       url: 'https://x.com/Kenji_theDev',
     },
     {
-      name: 'Steam',
-      icon: 'fa6-brands:steam',
-      url: 'https://store.steampowered.com',
+      name: 'Linkedin',
+      icon: 'fa6-brands:linkedin',
+      url: 'https://www.linkedin.com/in/silas-kenji-81587318a/',
     },
     {
       name: 'GitHub',
