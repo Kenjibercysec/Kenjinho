@@ -4,7 +4,7 @@ published: 2025-01-10
 updated: 2025-01-11
 description: 'Raspberry Pi HTTP server to monitor networks'
 image: ''
-tags: [Projects]
+tags: [Projects, C, IoT]
 category: Projects
 draft: false
 

@@ -4,7 +4,7 @@ published: 2025-02-20
 updated: 2025-03-04
 description: 'Django version of the SINGED application'
 image: ''
-tags: [Projects]
+tags: [Projects, Py, Django, HTML, CSS, JS]
 category: 'Projects'
 draft: false 
 ---
