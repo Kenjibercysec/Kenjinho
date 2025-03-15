@@ -1,7 +1,7 @@
 # About
 This is the portfolio/personal blog of [Kenji](https://github.com/Kenjibercysec).
 
-::github{repo="Kenjibercysec/Kenjinho"}
+::github{repo="Kenjibercysec/Kenjibercysec"}
 
 
 > ### My Contacts:
