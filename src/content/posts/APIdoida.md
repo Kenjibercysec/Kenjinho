@@ -1,9 +1,12 @@
 ---
-title: Task manager with HTML & C
+title: APIdoida
 published: 2025-03-14
-tags: [Projects, C, HTML]
-category: Projects
-draft: true
+description: ''
+image: ''
+tags: []
+category: ''
+draft: false 
+lang: ''
 ---
 
 ## GitHub Repository 
