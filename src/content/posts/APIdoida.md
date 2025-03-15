@@ -1,5 +1,5 @@
 ---
-title: APIdoida
+title: Task manager with HTML & C
 published: 2025-03-14
 description: ''
 image: ''
