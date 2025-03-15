@@ -1,7 +1,7 @@
 ---
 title: Task manager with HTML & C
 published: 2025-03-14
-tags: [Markdown, Projects, C, HTML]
+tags: [Projects, C, HTML]
 category: Projects
 draft: true
 ---
