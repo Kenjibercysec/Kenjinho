@@ -1,5 +1,5 @@
 ---
-title: Cryptofile: Secure file explorer 
+title: Cryptofile, Secure file explorer 
 published: 2025-04-07
 description: 'A set of tools for file encryption, including a secure file explorer and an automatic encryptor.'
 image: ''
