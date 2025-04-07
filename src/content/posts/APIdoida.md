@@ -1,9 +1,9 @@
 ---
 title: Task manager with HTML & C
 published: 2025-03-14
-description: ''
+description: 'This project implements an HTTP API in C to manage tasks, integrated with a simple HTML/JavaScript frontend. Below are the main functionalities and implementations performed.'
 image: ''
-tags: []
+tags: [Projects, C, HTTP, HTML]
 category: ''
 draft: false 
 lang: ''
