@@ -5,7 +5,7 @@ description: 'A set of tools for file encryption, including a secure file explor
 image: ''
 tags: [Projects, Python, Cybersec]
 category: 'Projects'
-draft: true 
+draft: false 
 lang: ''
 ---
 
