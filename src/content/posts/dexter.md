@@ -4,7 +4,7 @@ published: 2025-04-02
 description: 'Dexter is a Windows-based utility designed to provide process monitoring, network connection monitoring, and basic firewall management. It also includes features for managing whitelists and blacklists, as well as executing system commands.'
 image: ''
 tags: [Projects, C, Cybersec]
-category: ''
+category: 'Projects'
 draft: false 
 lang: ''
 ---
