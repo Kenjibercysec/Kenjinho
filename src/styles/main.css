@@ -12,6 +12,8 @@
   --border-color: #666666;
   --glow-color: hsl(var(--hue), 100%, 50%);
   --accent-color: #0074d9;
+  --header-text: #333333;
+  --project-text: #333333;
 }
 
 /* Retro-futuristic theme styles */
@@ -23,6 +25,8 @@
   --text-color: #333333;
   --card-bg: #ffffff;
   --border-color: #666666;
+  --header-text: #333333;
+  --project-text: #333333;
 }
 
 /* Retro-futuristic card styles */
@@ -277,6 +281,8 @@
   --card-bg: #ffffff;
   --border-color: #666666;
   --accent-color: #0074d9;
+  --header-text: #333333;
+  --project-text: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -295,14 +301,14 @@
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
-  color: var(--text-color);
+  color: var(--project-text);
 }
 
 .project-card h3,
 .project-card p,
 .project-card .project-meta,
 .project-card .project-tags {
-  color: var(--text-color);
+  color: var(--project-text);
 }
 
 /* Header and Footer styles */
@@ -319,5 +325,25 @@ header, footer {
   border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
+  color: var(--text-color);
+}
+
+/* Header styles */
+header {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--header-text);
+}
+
+header a,
+header h1,
+header p {
+  color: var(--header-text);
+}
+
+/* Footer styles */
+footer {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
 }
