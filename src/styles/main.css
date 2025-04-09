@@ -285,13 +285,16 @@
   --project-text: #333333;
 }
 
+/* Remove dark mode preferences */
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-bg: #0a0a0a;
-    --card-bg: #1a1a1a;
-    --text-color: #ffffff;
-    --border-color: #333333;
+    --page-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #666666;
     --accent-color: #0074d9;
+    --header-text: #333333;
+    --project-text: #333333;
   }
 }
 
@@ -301,21 +304,30 @@
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
-  color: var(--project-text);
+  color: #333333 !important;
 }
 
 .project-card h3,
 .project-card p,
 .project-card .project-meta,
-.project-card .project-tags {
-  color: var(--project-text);
+.project-card .project-tags,
+.project-card span,
+.project-card div {
+  color: #333333 !important;
 }
 
-/* Header and Footer styles */
-header, footer {
+/* Header styles */
+header {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  color: var(--text-color);
+}
+
+header a,
+header h1,
+header p,
+header span,
+header div {
+  color: #333333 !important;
 }
 
 /* About Me section styles */
@@ -325,25 +337,47 @@ header, footer {
   border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
-  color: var(--text-color);
+  color: #333333 !important;
 }
 
-/* Header styles */
-header {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  color: var(--header-text);
-}
-
-header a,
-header h1,
-header p {
-  color: var(--header-text);
+.about-section h1,
+.about-section h2,
+.about-section h3,
+.about-section p,
+.about-section span,
+.about-section div {
+  color: #333333 !important;
 }
 
 /* Footer styles */
 footer {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  color: var(--text-color);
+  color: #333333 !important;
+}
+
+footer a,
+footer p,
+footer span,
+footer div {
+  color: #333333 !important;
+}
+
+/* Force text color for all elements */
+.text-90,
+.text-75,
+.text-50,
+.text-30,
+.text-25 {
+  color: #333333 !important;
+}
+
+/* Force text color for buttons and links */
+.btn-card,
+.btn-plain,
+.btn-regular,
+.link,
+.link-lg,
+.link-underline {
+  color: #333333 !important;
 }
