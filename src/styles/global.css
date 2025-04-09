@@ -4,8 +4,8 @@
 
 :root {
   /* Cores base NASApunk (claras) */
-  --bg-primary: #f8f9fa;
-  --bg-secondary: #e9ecef;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
   --text-primary: #212529;
   --text-secondary: #495057;
   
@@ -20,16 +20,16 @@
   --shadow-color: rgba(0, 116, 217, 0.1);
   
   /* Cores específicas para seções */
-  --header-bg: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  --header-bg: #ffffff;
   --header-text: #212529;
-  --nav-bg: rgba(248, 249, 250, 0.95);
+  --nav-bg: rgba(255, 255, 255, 0.95);
   --nav-text: #212529;
-  --footer-bg: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  --footer-bg: #ffffff;
   --footer-text: #212529;
-  --about-bg: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  --about-bg: #ffffff;
   --about-text: #212529;
   --about-border: rgba(0, 0, 0, 0.1);
-  --card-bg: linear-gradient(135deg, rgba(248, 249, 250, 0.8), rgba(233, 236, 239, 0.8));
+  --card-bg: #ffffff;
   --card-text: #212529;
   --card-border: rgba(0, 0, 0, 0.1);
 }
@@ -283,6 +283,7 @@ nav a:hover {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 .card:hover {
@@ -362,6 +363,7 @@ footer {
   color: var(--footer-text);
   border-top: 1px solid var(--border-color);
   padding: 2rem 0;
+  box-shadow: 0 -2px 10px var(--shadow-color);
 }
 
 footer a {
