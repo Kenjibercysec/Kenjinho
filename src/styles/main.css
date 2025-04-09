@@ -22,17 +22,6 @@
   --text-color: hsl(var(--hue), 20%, 90%);
   --card-bg: hsl(var(--hue), 15%, 15%);
   --border-color: hsl(var(--hue), 30%, 30%);
-  --glow-color: hsl(var(--hue), 100%, 50%);
-}
-
-/* Glowing effects */
-.glow {
-  text-shadow: 0 0 10px var(--glow-color);
-}
-
-.glow-border {
-  border: 1px solid var(--glow-color);
-  box-shadow: 0 0 10px var(--glow-color);
 }
 
 /* Retro-futuristic card styles */
@@ -49,12 +38,25 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Neon text effect */
-.neon-text {
+/* Retro-futuristic button styles */
+.retro-button {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
-  text-shadow: 0 0 5px var(--glow-color),
-               0 0 10px var(--glow-color),
-               0 0 20px var(--glow-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.retro-button:hover {
+  background: var(--accent);
+  color: var(--page-bg);
+}
+
+/* Terminal-like text effect */
+.terminal-text {
+  font-family: 'Courier New', monospace;
+  color: var(--text-color);
 }
 
 /* Grid lines effect */
@@ -64,29 +66,6 @@
     linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
   background-size: 20px 20px;
   background-position: center center;
-}
-
-/* Retro-futuristic button styles */
-.retro-button {
-  background: var(--card-bg);
-  border: 1px solid var(--glow-color);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.retro-button:hover {
-  background: var(--glow-color);
-  color: var(--page-bg);
-  box-shadow: 0 0 10px var(--glow-color);
-}
-
-/* Terminal-like text effect */
-.terminal-text {
-  font-family: 'Courier New', monospace;
-  color: var(--text-color);
-  text-shadow: 0 0 5px var(--glow-color);
 }
 
 /* Holographic effect */

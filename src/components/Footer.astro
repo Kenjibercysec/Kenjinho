@@ -5,7 +5,7 @@ import { url } from '../utils/url-utils'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="retro-card holographic mt-8">
+<footer class="retro-card mt-8">
   <div class="container mx-auto px-4 py-6">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-4 md:mb-0">
@@ -41,73 +41,23 @@ const currentYear = new Date().getFullYear()
     overflow: hidden;
   }
 
-  .retro-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.1)
-    );
-    backdrop-filter: blur(5px);
-    z-index: -1;
-  }
-
-  .holographic {
-    background: linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.1)
-    );
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
   .terminal-text {
     font-family: 'Courier New', monospace;
     color: var(--text-color);
-    text-shadow: 0 0 5px var(--glow-color);
   }
 
   .retro-button {
     background: var(--card-bg);
-    border: 1px solid var(--glow-color);
+    border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .retro-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    transition: 0.5s;
-  }
-
-  .retro-button:hover::before {
-    left: 100%;
   }
 
   .retro-button:hover {
-    background: var(--glow-color);
+    background: var(--accent);
     color: var(--page-bg);
-    box-shadow: 0 0 10px var(--glow-color);
   }
 
   .retro-button .icon {

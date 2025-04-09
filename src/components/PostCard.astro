@@ -47,7 +47,7 @@ const coverWidth = '28%'
 const { remarkPluginFrontmatter } = await entry.render()
 ---
 
-<article class="retro-card holographic scan-lines">
+<article class="retro-card">
   <a href={postUrl} class="block">
     {hasCover && (
       <div class="mb-4 overflow-hidden rounded-lg">
@@ -59,7 +59,7 @@ const { remarkPluginFrontmatter } = await entry.render()
         />
       </div>
     )}
-    <h2 class="neon-text text-xl font-bold mb-2">{title}</h2>
+    <h2 class="text-xl font-bold mb-2">{title}</h2>
     <p class="terminal-text text-sm mb-4">{description || remarkPluginFrontmatter.excerpt}</p>
     <div class="flex items-center justify-between">
       <time class="terminal-text text-sm" datetime={published.toISOString()}>
@@ -87,42 +87,14 @@ const { remarkPluginFrontmatter } = await entry.render()
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
-  .holographic {
-    background: linear-gradient(45deg, 
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.1)
-    );
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .scan-lines {
-    background-image: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-  }
-
-  .neon-text {
-    color: var(--text-color);
-    text-shadow: 0 0 5px var(--glow-color),
-                 0 0 10px var(--glow-color),
-                 0 0 20px var(--glow-color);
-  }
-
   .terminal-text {
     font-family: 'Courier New', monospace;
     color: var(--text-color);
-    text-shadow: 0 0 5px var(--glow-color);
   }
 
   .retro-button {
     background: var(--card-bg);
-    border: 1px solid var(--glow-color);
+    border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -130,8 +102,7 @@ const { remarkPluginFrontmatter } = await entry.render()
   }
 
   .retro-button:hover {
-    background: var(--glow-color);
+    background: var(--accent);
     color: var(--page-bg);
-    box-shadow: 0 0 10px var(--glow-color);
   }
 </style>
