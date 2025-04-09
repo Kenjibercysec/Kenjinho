@@ -7,7 +7,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #333333;
+  --text-color: #000000;
   --card-bg: #ffffff;
   --border-color: #666666;
   --glow-color: hsl(var(--hue), 100%, 50%);
@@ -20,7 +20,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #333333;
+  --text-color: #000000;
   --card-bg: #ffffff;
   --border-color: #666666;
 }
@@ -113,6 +113,7 @@
 @layer components {
     .card-base {
         @apply rounded-[var(--radius-large)] overflow-hidden bg-[var(--card-bg)] transition;
+        color: var(--text-color);
     }
     h1, h2, h3, h4, h5, h6, p, a, span, li, ul, ol, blockquote, code, pre, table, th, td, strong {
         @apply transition;
@@ -272,7 +273,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #333333;
+  --text-color: #000000;
   --card-bg: #ffffff;
   --border-color: #666666;
   --accent-color: #0074d9;
@@ -288,17 +289,21 @@
   }
 }
 
-/* Card styles */
-.card-base {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
+/* Project card specific styles */
+.project-card {
+  color: var(--text-color);
+}
+
+.project-card h3,
+.project-card p,
+.project-card .project-meta,
+.project-card .project-tags {
+  color: var(--text-color);
 }
 
 /* Header and Footer styles */
 header, footer {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
