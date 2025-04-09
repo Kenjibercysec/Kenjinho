@@ -26,6 +26,9 @@ const hasBannerCredit =
 const hasBannerLink = !!siteConfig.banner.credit.url
 
 const mainPanelTop = siteConfig.banner.enable ? `calc(${BANNER_HEIGHT}vh - ${MAIN_PANEL_OVERLAPS_BANNER_HEIGHT}rem)` : "5.5rem"
+
+// Ensure social links array exists
+const socialLinks = siteConfig.social || []
 ---
 
 <Layout title={title} banner={banner} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
@@ -65,7 +68,6 @@ const mainPanelTop = siteConfig.banner.enable ? `calc(${BANNER_HEIGHT}vh - ${MAI
                       name="fa6-solid:arrow-up-right-from-square">
                 </Icon>
             </a>}
-
 
             <SideBar class="mb-4 row-start-1 row-end-2 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation" headings={headings}></SideBar>
 

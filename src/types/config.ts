@@ -26,6 +26,11 @@ export type SiteConfig = {
   }
 
   favicon: Favicon[]
+  social: {
+    name: string
+    icon: string
+    url: string
+  }[]
 }
 
 export type Favicon = {

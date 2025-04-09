@@ -34,6 +34,23 @@ export const siteConfig: SiteConfig = {
     //   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
     //   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
     // }
+  ],
+  social: [
+    {
+      name: 'X',
+      icon: 'fa6-brands:twitter',
+      url: 'https://x.com/Kenji_theDev',
+    },
+    {
+      name: 'Linkedin',
+      icon: 'fa6-brands:linkedin',
+      url: 'https://www.linkedin.com/in/silas-kenji-81587318a/',
+    },
+    {
+      name: 'GitHub',
+      icon: 'fa6-brands:github',
+      url: 'https://github.com/Kenjibercysec',
+    },
   ]
 }
 
