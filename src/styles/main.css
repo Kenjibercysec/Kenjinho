@@ -7,7 +7,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #000000;
+  --text-color: #333333;
   --card-bg: #f8f9fa;
   --border-color: #e9ecef;
   --glow-color: hsl(var(--hue), 100%, 50%);
@@ -19,10 +19,10 @@
   --hue: 220;
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
-  --page-bg: hsl(var(--hue), 10%, 10%);
-  --text-color: hsl(var(--hue), 20%, 90%);
-  --card-bg: hsl(var(--hue), 15%, 15%);
-  --border-color: hsl(var(--hue), 30%, 30%);
+  --page-bg: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f8f9fa;
+  --border-color: #e9ecef;
 }
 
 /* Retro-futuristic card styles */
@@ -272,7 +272,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #000000;
+  --text-color: #333333;
   --card-bg: #f8f9fa;
   --border-color: #e9ecef;
   --accent-color: #0074d9;

@@ -23,6 +23,7 @@ import { siteConfig } from '../config';
     border-radius: 8px;
     padding: 4rem 2rem;
     margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
 
   .hero-container {
@@ -62,7 +63,7 @@ import { siteConfig } from '../config';
 
   .cta-button {
     background: var(--accent-color);
-    color: var(--page-bg);
+    color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
     text-decoration: none;
@@ -73,6 +74,7 @@ import { siteConfig } from '../config';
   .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #0066c0;
   }
 
   .cta-button.secondary {
@@ -83,6 +85,8 @@ import { siteConfig } from '../config';
 
   .cta-button.secondary:hover {
     background: var(--card-bg);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
   }
 
   .hero-image {
