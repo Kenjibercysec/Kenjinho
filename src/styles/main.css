@@ -7,7 +7,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #000000;
+  --text-color: #333333;
   --card-bg: #ffffff;
   --border-color: #666666;
   --glow-color: hsl(var(--hue), 100%, 50%);
@@ -20,7 +20,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #000000;
+  --text-color: #333333;
   --card-bg: #ffffff;
   --border-color: #666666;
 }
@@ -146,7 +146,7 @@
         active:bg-[var(--btn-card-bg-active)] border border-[var(--border-color)] text-[var(--text-color)];
     }
     .btn-card.disabled {
-        @apply pointer-events-none text-black/10
+        @apply pointer-events-none text-[var(--text-color)] opacity-10
     }
     .btn-plain {
         @apply transition relative flex items-center justify-center bg-none
@@ -273,7 +273,7 @@
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
-  --text-color: #000000;
+  --text-color: #333333;
   --card-bg: #ffffff;
   --border-color: #666666;
   --accent-color: #0074d9;
@@ -319,4 +319,5 @@ header, footer {
   border-radius: 8px;
   padding: 2rem;
   margin: 2rem 0;
+  color: var(--text-color);
 }
