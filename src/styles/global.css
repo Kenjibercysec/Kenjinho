@@ -3,24 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --text-primary: #00ff00;
-  --text-secondary: #00cc00;
-  --accent-primary: #00ff00;
-  --accent-secondary: #00cc00;
-  --border-color: rgba(0, 255, 0, 0.3);
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #e9ecef;
+  --text-primary: #495057;
+  --text-secondary: #6c757d;
+  --accent-primary: #91a7ff;
+  --accent-secondary: #ff9aa2;
+  --accent-tertiary: #b197fc;
+  --accent-quaternary: #ffd43b;
+  --border-color: rgba(73, 80, 87, 0.2);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #f0f0f0;
-    --bg-secondary: #e0e0e0;
-    --text-primary: #006600;
-    --text-secondary: #009900;
-    --accent-primary: #006600;
-    --accent-secondary: #009900;
-    --border-color: rgba(0, 102, 0, 0.3);
+    --bg-primary: #343a40;
+    --bg-secondary: #495057;
+    --text-primary: #f8f9fa;
+    --text-secondary: #e9ecef;
+    --accent-primary: #91a7ff;
+    --accent-secondary: #ff9aa2;
+    --accent-tertiary: #b197fc;
+    --accent-quaternary: #ffd43b;
+    --border-color: rgba(248, 249, 250, 0.2);
   }
 }
 
