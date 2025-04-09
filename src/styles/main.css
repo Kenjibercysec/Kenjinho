@@ -8,8 +8,8 @@
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
   --text-color: #333333;
-  --card-bg: #f8f9fa;
-  --border-color: #e9ecef;
+  --card-bg: #ffffff;
+  --border-color: #666666;
   --glow-color: hsl(var(--hue), 100%, 50%);
   --accent-color: #0074d9;
 }
@@ -21,8 +21,8 @@
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
   --text-color: #333333;
-  --card-bg: #f8f9fa;
-  --border-color: #e9ecef;
+  --card-bg: #ffffff;
+  --border-color: #666666;
 }
 
 /* Retro-futuristic card styles */
@@ -273,8 +273,8 @@
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
   --page-bg: #ffffff;
   --text-color: #333333;
-  --card-bg: #f8f9fa;
-  --border-color: #e9ecef;
+  --card-bg: #ffffff;
+  --border-color: #666666;
   --accent-color: #0074d9;
 }
 
@@ -286,4 +286,19 @@
     --border-color: #333333;
     --accent-color: #0074d9;
   }
+}
+
+/* Card styles */
+.card-base {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Header and Footer styles */
+header, footer {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
 }
