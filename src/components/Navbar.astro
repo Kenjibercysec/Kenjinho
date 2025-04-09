@@ -208,4 +208,54 @@ loadPagefind()
   .neon-text:hover::after {
     transform: scaleX(1);
   }
+
+  .nasapunk-nav {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--accent-color);
+  }
+
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
 </style>

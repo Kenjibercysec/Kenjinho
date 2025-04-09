@@ -5,67 +5,126 @@ import { url } from '../utils/url-utils'
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="retro-card mt-8">
-  <div class="container mx-auto px-4 py-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="mb-4 md:mb-0">
-        <p class="terminal-text">
-          © {currentYear} {siteConfig.title}
-        </p>
+<footer class="nasapunk-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>{siteConfig.title}</h3>
+        <p>Exploring the frontiers of technology and space.</p>
       </div>
-      <div class="flex space-x-4">
-        {siteConfig.social.map((social) => (
-          <a
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="retro-button"
-            aria-label={social.name}
-          >
-            <Icon name={social.icon} class="text-lg" />
-          </a>
-        ))}
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <div class="social-links">
+          {siteConfig.social.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label={social.name}
+            >
+              <Icon name={social.icon} class="text-lg" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} {siteConfig.title}. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <style>
-  .retro-card {
+  .nasapunk-footer {
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-top: 2rem;
   }
 
-  .terminal-text {
-    font-family: 'Courier New', monospace;
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3 {
     color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
   }
 
-  .retro-button {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+  .footer-section p {
     color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    opacity: 0.8;
   }
 
-  .retro-button:hover {
-    background: var(--accent);
-    color: var(--page-bg);
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
   }
 
-  .retro-button .icon {
-    transition: transform 0.3s ease;
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
   }
 
-  .retro-button:hover .icon {
-    transform: scale(1.2);
+  .footer-section a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: var(--accent-color);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: var(--accent-color);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .footer-bottom p {
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 

@@ -1,0 +1,113 @@
+import { siteConfig } from '../config';
+
+<section class="nasapunk-hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">{siteConfig.title}</h1>
+      <p class="hero-subtitle">{siteConfig.description}</p>
+      <div class="hero-cta">
+        <a href="/projects" class="cta-button">View Projects</a>
+        <a href="/contact" class="cta-button secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/images/hero-illustration.svg" alt="Space Illustration" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .nasapunk-hero {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .cta-button {
+    background: var(--accent-color);
+    color: var(--page-bg);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-button.secondary {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+  }
+
+  .cta-button.secondary:hover {
+    background: var(--card-bg);
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+  }
+</style> 

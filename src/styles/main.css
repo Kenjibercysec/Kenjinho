@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --hue: 220;
+  --hue: 200;
   --accent: hsl(var(--hue), 100%, 50%);
   --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
-  --page-bg: hsl(var(--hue), 10%, 10%);
-  --text-color: hsl(var(--hue), 20%, 90%);
-  --card-bg: hsl(var(--hue), 15%, 15%);
-  --border-color: hsl(var(--hue), 30%, 30%);
+  --page-bg: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --border-color: #e9ecef;
   --glow-color: hsl(var(--hue), 100%, 50%);
+  --accent-color: #0074d9;
 }
 
 /* Retro-futuristic theme styles */
@@ -35,7 +36,7 @@
 
 .retro-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Retro-futuristic button styles */
@@ -49,8 +50,8 @@
 }
 
 .retro-button:hover {
-  background: var(--accent);
-  color: var(--page-bg);
+  background: var(--accent-color);
+  color: #ffffff;
 }
 
 /* Terminal-like text effect */
@@ -263,4 +264,26 @@
 
 .collapsed {
     height: var(--collapsedHeight);
+}
+
+/* NASApunk theme styles */
+.nasapunk {
+  --hue: 200;
+  --accent: hsl(var(--hue), 100%, 50%);
+  --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
+  --page-bg: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --border-color: #e9ecef;
+  --accent-color: #0074d9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    --accent-color: #0074d9;
+  }
 }
