@@ -25,19 +25,19 @@
 }
 
 body {
-  @apply bg-retro-dark text-retro-green font-mono;
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-family: 'Courier New', monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-retro-green font-bold;
   color: var(--text-primary);
+  font-weight: bold;
 }
 
 a {
-  @apply text-retro-accent hover:text-retro-green transition-colors;
   color: var(--accent-primary);
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -45,30 +45,61 @@ a:hover {
 }
 
 button {
-  @apply bg-retro-dark border border-retro-border text-retro-green px-4 py-2 rounded hover:bg-retro-accent hover:text-retro-dark transition-colors;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
 }
 
 input, textarea, select {
-  @apply bg-retro-dark border border-retro-border text-retro-green px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-retro-accent;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-primary);
 }
 
 .retro-card {
-  @apply bg-retro-dark border border-retro-border rounded-lg p-6 shadow-retro;
   background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 .holographic {
-  @apply relative overflow-hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .holographic::before {
   content: '';
-  @apply absolute inset-0 bg-gradient-to-b from-transparent via-retro-accent/20 to-transparent;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 255, 0, 0.2),
+    transparent
+  );
   animation: scan 10s linear infinite;
 }
 
 .scanlines {
-  @apply absolute inset-0;
+  position: absolute;
+  inset: 0;
   background-image: linear-gradient(
     to bottom,
     transparent 50%,
@@ -78,17 +109,47 @@ input, textarea, select {
 }
 
 .glow-text {
-  @apply animate-glow;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 .message-error {
-  @apply bg-red-900/50 border border-red-500 text-red-200 p-4 rounded;
+  background-color: rgba(220, 38, 38, 0.5);
+  border: 1px solid rgb(239, 68, 68);
+  color: rgb(254, 202, 202);
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
 
 .message-success {
-  @apply bg-green-900/50 border border-green-500 text-green-200 p-4 rounded;
+  background-color: rgba(22, 163, 74, 0.5);
+  border: 1px solid rgb(34, 197, 94);
+  color: rgb(187, 247, 208);
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
 
 .message-warning {
-  @apply bg-yellow-900/50 border border-yellow-500 text-yellow-200 p-4 rounded;
+  background-color: rgba(202, 138, 4, 0.5);
+  border: 1px solid rgb(234, 179, 8);
+  color: rgb(254, 249, 195);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 } 
