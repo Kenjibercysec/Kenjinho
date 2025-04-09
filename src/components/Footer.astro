@@ -1,16 +1,81 @@
 ---
-
-import { profileConfig } from '../config'
+import { siteConfig } from '../config'
+import { Icon } from 'astro-icon/components'
 import { url } from '../utils/url-utils'
 const currentYear = new Date().getFullYear()
 ---
+
+<footer class="retro-card holographic mt-8">
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <p class="terminal-text">
+          © {currentYear} {siteConfig.title}
+        </p>
+      </div>
+      <div class="flex space-x-4">
+        {siteConfig.social.map((social) => (
+          <a
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="retro-button"
+          >
+            <Icon name={social.icon} class="text-lg" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .retro-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .holographic {
+    background: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .terminal-text {
+    font-family: 'Courier New', monospace;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--glow-color);
+  }
+
+  .retro-button {
+    background: var(--card-bg);
+    border: 1px solid var(--glow-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .retro-button:hover {
+    background: var(--glow-color);
+    color: var(--page-bg);
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+</style>
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
 <div class="transition border-t border-black/10 dark:border-white/15 my-10 border-dashed mx-32"></div>
 <!--<div class="transition bg-[oklch(92%_0.01_var(&#45;&#45;hue))] dark:bg-black rounded-2xl py-8 mt-4 mb-8 flex flex-col items-center justify-center px-6">-->
 <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6">
     <div class="transition text-50 text-sm text-center">
-        &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
+        &copy; <span id="copyright-year">{currentYear}</span> {siteConfig.title}. All Rights Reserved. /
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('rss.xml')}>RSS</a> /
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a><br>
         Powered by

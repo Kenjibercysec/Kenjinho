@@ -6,6 +6,8 @@ import { Icon } from 'astro-icon/components'
 import { i18n } from '../i18n/translation'
 import I18nKey from '../i18n/i18nKey'
 import { getDir } from '../utils/url-utils'
+import type { CollectionEntry } from 'astro:content'
+import { url } from '../utils/url-utils'
 
 interface Props {
   class?: string
@@ -20,6 +22,7 @@ interface Props {
   description: string
   draft: boolean
   style: string
+  post: CollectionEntry<'blog'>
 }
 const {
   entry,
@@ -32,6 +35,7 @@ const {
   image,
   description,
   style,
+  post
 } = Astro.props
 const className = Astro.props.class
 
@@ -102,4 +106,92 @@ const { remarkPluginFrontmatter } = await entry.render()
 <div class="transition border-t-[1px] border-dashed mx-6 border-black/10 dark:border-white/[0.15] last:border-t-0 md:hidden"></div>
 
 <style define:vars={{coverWidth}}>
+</style>
+
+<article class="retro-card holographic scan-lines">
+  <a href={url(`/blog/${post.slug}`)} class="block">
+    {image && (
+      <div class="mb-4 overflow-hidden rounded-lg">
+        <ImageWrapper
+          src={image.src}
+          alt={image.alt}
+          class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+    )}
+    <h2 class="neon-text text-xl font-bold mb-2">{title}</h2>
+    <p class="terminal-text text-sm mb-4">{description}</p>
+    <div class="flex items-center justify-between">
+      <time class="terminal-text text-sm" datetime={published.toISOString()}>
+        {published.toLocaleDateString()}
+      </time>
+      <span class="retro-button">
+        <span class="terminal-text">Read More</span>
+        <Icon name="fa6-solid:arrow-right" class="ml-2" />
+      </span>
+    </div>
+  </a>
+</article>
+
+<style>
+  .retro-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .retro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .holographic {
+    background: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .scan-lines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  }
+
+  .neon-text {
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--glow-color),
+                 0 0 10px var(--glow-color),
+                 0 0 20px var(--glow-color);
+  }
+
+  .terminal-text {
+    font-family: 'Courier New', monospace;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--glow-color);
+  }
+
+  .retro-button {
+    background: var(--card-bg);
+    border: 1px solid var(--glow-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .retro-button:hover {
+    background: var(--glow-color);
+    color: var(--page-bg);
+    box-shadow: 0 0 10px var(--glow-color);
+  }
 </style>

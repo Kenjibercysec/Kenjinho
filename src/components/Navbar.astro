@@ -115,3 +115,39 @@ async function loadPagefind() {
 }
 loadPagefind()
 </script>}
+
+<style>
+  .retro-nav {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--glow-color);
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+
+  .retro-button {
+    background: var(--card-bg);
+    border: 1px solid var(--glow-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .retro-button:hover {
+    background: var(--glow-color);
+    color: var(--page-bg);
+    box-shadow: 0 0 10px var(--glow-color);
+  }
+
+  .terminal-text {
+    font-family: 'Courier New', monospace;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--glow-color);
+  }
+
+  .neon-text {
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--glow-color),
+                 0 0 10px var(--glow-color),
+                 0 0 20px var(--glow-color);
+  }
+</style>

@@ -1,4 +1,134 @@
+@tailwind base;
 @tailwind components;
+@tailwind utilities;
+
+:root {
+  --hue: 220;
+  --accent: hsl(var(--hue), 100%, 50%);
+  --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
+  --page-bg: hsl(var(--hue), 10%, 10%);
+  --text-color: hsl(var(--hue), 20%, 90%);
+  --card-bg: hsl(var(--hue), 15%, 15%);
+  --border-color: hsl(var(--hue), 30%, 30%);
+  --glow-color: hsl(var(--hue), 100%, 50%);
+}
+
+/* Retro-futuristic theme styles */
+.retro-futuristic {
+  --hue: 220;
+  --accent: hsl(var(--hue), 100%, 50%);
+  --accent-gradient: linear-gradient(45deg, var(--accent), hsl(var(--hue), 100%, 70%));
+  --page-bg: hsl(var(--hue), 10%, 10%);
+  --text-color: hsl(var(--hue), 20%, 90%);
+  --card-bg: hsl(var(--hue), 15%, 15%);
+  --border-color: hsl(var(--hue), 30%, 30%);
+  --glow-color: hsl(var(--hue), 100%, 50%);
+}
+
+/* Glowing effects */
+.glow {
+  text-shadow: 0 0 10px var(--glow-color);
+}
+
+.glow-border {
+  border: 1px solid var(--glow-color);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Retro-futuristic card styles */
+.retro-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.retro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Neon text effect */
+.neon-text {
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--glow-color),
+               0 0 10px var(--glow-color),
+               0 0 20px var(--glow-color);
+}
+
+/* Grid lines effect */
+.grid-lines {
+  background-image: 
+    linear-gradient(var(--border-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+/* Retro-futuristic button styles */
+.retro-button {
+  background: var(--card-bg);
+  border: 1px solid var(--glow-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.retro-button:hover {
+  background: var(--glow-color);
+  color: var(--page-bg);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Terminal-like text effect */
+.terminal-text {
+  font-family: 'Courier New', monospace;
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--glow-color);
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Scan line effect */
+.scan-lines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+/* Retro-futuristic navigation */
+.retro-nav {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--glow-color);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .retro-card {
+    padding: 1rem;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 3px var(--glow-color),
+                 0 0 6px var(--glow-color);
+  }
+}
 
 @layer components {
     .card-base {
