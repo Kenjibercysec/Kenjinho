@@ -45,12 +45,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
+  text-shadow: none;
 }
 
 a {
   color: #0074d9;
   transition: all 0.3s ease;
   text-decoration: none;
+  text-shadow: none;
 }
 
 a:hover {
@@ -66,6 +68,7 @@ button {
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-shadow: none;
 }
 
 button:hover {
@@ -125,6 +128,7 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  text-shadow: none;
 }
 
 nav a:hover {
@@ -140,28 +144,29 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   position: relative;
-  overflow: hidden;
   padding: 4rem 2rem;
-  background: linear-gradient(45deg, rgba(0, 116, 217, 0.1), rgba(46, 204, 64, 0.1));
+  background: #ffffff;
 }
 
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  text-shadow: none;
 }
 
 .hero p {
   font-size: 1.5rem;
   max-width: 600px;
   margin: 0 auto;
-  color: var(--text-secondary);
+  color: #333333;
 }
 
 /* Seção de Conteúdo */
 .content-section {
   padding: 4rem 2rem;
   position: relative;
+  background: #ffffff;
 }
 
 .content-section h2 {
@@ -169,6 +174,7 @@ nav a:hover {
   margin-bottom: 3rem;
   position: relative;
   text-transform: uppercase;
+  text-shadow: none;
 }
 
 .content-section h2::after {
@@ -196,6 +202,7 @@ nav a:hover {
   padding: 1.5rem;
   transition: all 0.3s ease;
   position: relative;
+  opacity: 1;
 }
 
 .card:hover {
@@ -204,14 +211,15 @@ nav a:hover {
 }
 
 .card h3 {
-  color: var(--card-text);
+  color: #000000;
   margin-bottom: 1rem;
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
+  text-shadow: none;
 }
 
 .card p {
-  color: var(--text-secondary);
+  color: #333333;
   line-height: 1.6;
 }
 
@@ -231,6 +239,7 @@ nav a:hover {
   text-transform: uppercase;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 2px;
+  text-shadow: none;
 }
 
 .about-section p {
@@ -249,11 +258,12 @@ footer {
 }
 
 footer a {
-  color: var(--accent-primary);
+  color: #0074d9;
+  text-shadow: none;
 }
 
 footer a:hover {
-  color: var(--accent-secondary);
+  color: #ff4136;
 }
 
 /* Status indicators */
